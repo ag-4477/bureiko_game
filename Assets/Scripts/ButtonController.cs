@@ -5,11 +5,13 @@ public class ButtonController : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is createdd
     // int currentQuestionId;
-    private GameDataWrapper data;
+    private JsonPathLoader loader;
 
+    private GameDataWrapper data;
+    
     void Start()
     {
-        JsonPathLoader loader = new JsonPathLoader();
+        
         data = loader.gameData;
 
         NextBreiko(0);
@@ -21,7 +23,7 @@ public class ButtonController : MonoBehaviour
 
         for (int i = 0; i < buttons.Count; i++)
         {
-            buttons[i].UpdateButtonText(currentQuestionId, data.questions[currentQuestionId].questiondata[i].text);
+            buttons[i].UpdateButtonText(currentQuestionId, data.questions[currentQuestionId].questiondata[i].data.text);
             Debug.Log(buttons[i].buttonName);
         }
     }
