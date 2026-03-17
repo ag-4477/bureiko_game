@@ -5,14 +5,17 @@ using System.Linq;
 
 public class Button : MonoBehaviour
 {
+    public GameObject ScoreController;
+    private ScoreController scoreControllerScript;
     public string buttonName;
-    private int id;
+    public int id;
     [SerializeField] private TextMeshProUGUI tmpText;
 
-    // void Start()
-    // {
-    //     UpdateAllButtons();
-    // }
+    void Start()
+    {
+        ScoreController = GameObject.Find("GameManager");
+        scoreControllerScript = ScoreController.GetComponent<ScoreController>();
+    }
 
     public void UpdateButtonText(int buttonId,string buttonText)
     {
@@ -32,6 +35,13 @@ public class Button : MonoBehaviour
     public void OnButtonClick()
     {
         Debug.Log("ID: " + id + " (" + buttonName + ") が押されました");
-        SetTextDirectly();
+        if(scoreControllerScript != null)
+        {
+            scoreControllerScript.ButtonPressed(id);
+        }
+        else
+        {
+            Debug.LogWarning("対象にBreikoBarスクリプトがついていません！");
+        }
     }
 }
