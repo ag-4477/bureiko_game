@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 34545184}
   - component: {fileID: 34545186}
   - component: {fileID: 34545187}
-  - component: {fileID: 34545186}
+  - component: {fileID: 34545188}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -426,7 +426,7 @@ CanvasRenderer:
   m_GameObject: {fileID: 311319875}
   m_CullTransparentMesh: 1
   questionId: 0
---- !u!114 &34545186
+--- !u!114 &34545188
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
