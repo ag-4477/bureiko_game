@@ -5,23 +5,46 @@ public class ButtonController : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is createdd
     // int currentQuestionId;
-    public JsonPathLoader loader;
+    private JsonPathLoader loader;
     private GameDataWrapper data;
-    private List<Button> buttons;
+    private GameObject[] buttons;
+    private Button[] buttonScripts;
 
     
     void Start()
     {
         loader = gameObject.GetComponent<JsonPathLoader>();
-        data = loader.gameData;
+        buttonScripts = Object.FindObjectsByType<Button>(FindObjectsSortMode.None);
+        Debug.Log(buttonScripts);
+        foreach (Button buttonScript in buttonScripts)
+        {
+            Debug.Log(buttonScript);
+        }
     }
 
-    void NextBreiko(int currentQuestionId)
+    public void LoadJson()
     {
-        for (int i = 0; i < buttons.Count; i++)
+        data = loader.gameData;
+        if(data != null)
         {
-            buttons[i].UpdateButtonText(currentQuestionId, data.questions[currentQuestionId].questiondata[i].data.text);
-            Debug.Log(buttons[i].buttonName);
+            Debug.Log("Data読み込みdone");
+        }
+        else
+        {
+            Debug.LogWarning("Data読み込み失敗");
+        }
+    }
+
+    public void NextBreiko(int currentQuestionId)
+    {
+        int i = 0;
+        foreach (Button buttonScript in buttonScripts)
+        {
+            Debug.Log(currentQuestionId);
+            Debug.Log(i);
+            buttonScript.UpdateButtonText(currentQuestionId, data.questions[currentQuestionId].questiondata[i].data.text);
+            Debug.Log(buttonScript.buttonName);
+            i++;
         }
     }
 }
