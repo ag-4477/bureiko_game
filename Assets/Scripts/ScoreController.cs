@@ -26,6 +26,7 @@ public class ScoreController : MonoBehaviour
             
             isWaiting = true;
             timeManager.StartTimer();
+            buttonControllerScript.NextBreiko(questionId);
         }
     }
 
