@@ -34,7 +34,7 @@ public class Button : MonoBehaviour
 
     public void OnButtonClick()
     {
-        Debug.Log("ID: " + id + " (" + buttonName + ") が押されました");
+        // Debug.Log("ID: " + id + " (" + buttonName + ") が押されました");
         if(scoreControllerScript != null)
         {
             scoreControllerScript.ButtonPressed(id);

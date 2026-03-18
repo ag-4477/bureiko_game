@@ -35,6 +35,11 @@ public class ScoreController : MonoBehaviour
             breikoBarScript.UpdateBreikoValue(buttonId);
             buttonControllerScript.NextBreiko(questionId);
             questionId++;
+            int breikoValue = breikoBarScript.bureikoBarValue;
+            if(breikoValue >= 100)
+            {
+                Debug.Log("爆発");
+            }
         }
         else
         {
