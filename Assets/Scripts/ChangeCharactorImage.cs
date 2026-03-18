@@ -11,6 +11,7 @@ public class ChangeCharactorImage : MonoBehaviour
     private Image img;
     private GameObject obj;
     BreikoBar bureikoBarScript;
+    RectTransform rectTransform;
 
     void Start()
     {
@@ -30,7 +31,7 @@ public class ChangeCharactorImage : MonoBehaviour
         {
             img.sprite = Resources.Load<Sprite>("Charactor/senpai/angry");
         }
-        else
+        else if (bureikoBarScript.bureikoBarValue > 80)
         {
             img.sprite = Resources.Load<Sprite>("Charactor/senpai/superAngry");
         }

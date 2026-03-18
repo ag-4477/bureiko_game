@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 34545183}
   - component: {fileID: 34545185}
   - component: {fileID: 34545184}
+  - component: {fileID: 34545186}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -182,6 +183,18 @@ MonoBehaviour:
   questionData:
     questions: []
   questionId: 0
+--- !u!114 &34545186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34545182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bedbd193bd5d4954bb447da9e1235082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonController
 --- !u!1 &323207694
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,7 +1058,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7176642305683230283, guid: 607f1d9c82d601a44944670ee505cde1, type: 3}
+  m_Sprite: {fileID: -7176642305683230283, guid: 2dfdd22a7566c934e934e054f451eb39, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1568,7 +1581,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -9082789242079819192, guid: 870920b330e3ed2408cde76a77e0962e, type: 3}
+  m_Sprite: {fileID: 4606157284126940538, guid: 8df012a935607364d90160d66c6041b3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1598,6 +1611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b70ad7ee894be48b2f319c5647a98d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChangeCharactorImage
+  sr: {fileID: 0}
 --- !u!1 &814099567
 GameObject:
   m_ObjectHideFlags: 0
