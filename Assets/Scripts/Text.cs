@@ -8,7 +8,7 @@ public class Text : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public int id;
     public string bossMessage;
-    [SerializeField] private TextMeshProUGUI tmpText;
+    [SerializeField] private TextMeshProUGUI BossText;
     void Start()
     {
         
@@ -22,9 +22,9 @@ public class Text : MonoBehaviour
 
     public void SetBossText()
     {
-        if (tmpText != null)
+        if (BossText != null)
         {
-            tmpText.text = bossMessage;
+            BossText.text = bossMessage;
         }
     }
 
