@@ -182,7 +182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScoreController
   breikoBar: {fileID: 1035990919}
   gameManager: {fileID: 34545187}
-  timeManager: {fileID: 726518197}
+  timeManegerObject: {fileID: 726518196}
   questionData:
     questions: []
   questionId: 0
@@ -2108,7 +2108,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 726518198}
-  - component: {fileID: 726518197}
+  - component: {fileID: 726518199}
   m_Layer: 0
   m_Name: TimeManager
   m_TagString: Untagged
@@ -2116,20 +2116,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &726518197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 726518196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f2f7ea0246c6624e8989758a6b30953, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TimeManager
-  timeLimit: 5
-  timerCircle: {fileID: 394073186}
 --- !u!4 &726518198
 Transform:
   m_ObjectHideFlags: 0
@@ -2145,6 +2131,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &726518199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726518196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a99cece48783e364890b1a37fd42549a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimeManager
+  timeLimit: 5
+  timerCircle: {fileID: 394073186}
 --- !u!1 &757883982
 GameObject:
   m_ObjectHideFlags: 0

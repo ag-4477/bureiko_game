@@ -4,19 +4,25 @@ public class ScoreController : MonoBehaviour
 {
     public GameObject breikoBar;
     public GameManager gameManager;
-    public TimeManager timeManager; // TimeManagerへの参照
+    private TimeManager timeManager; // TimeManagerへの参照
+    public GameObject timeManegerObject;
 
     private JsonPathLoader jsonPathLoaderScript;
     private ButtonController buttonControllerScript;
     public GameDataWrapper questionData;
     private BreikoBar breikoBarScript;
     public int questionId;
-    private bool isWaiting = false;
+    private bool isWaiting;
 
-    void Start()
+    void Awake()
     {
+        timeManager = timeManegerObject.GetComponent<TimeManager>();
         breikoBarScript = breikoBar.GetComponent<BreikoBar>();
         buttonControllerScript = gameObject.GetComponent<ButtonController>();
+    }
+    void Start()
+    {
+        isWaiting = false;
         questionId = 0;
 
         if (timeManager != null)
@@ -27,6 +33,10 @@ public class ScoreController : MonoBehaviour
             isWaiting = true;
             timeManager.StartTimer();
             buttonControllerScript.NextBreiko(questionId);
+        }
+        else
+        {
+            Debug.LogWarning("timeManagerがありません！");
         }
     }
 
