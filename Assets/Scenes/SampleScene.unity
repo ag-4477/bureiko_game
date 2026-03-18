@@ -212,7 +212,7 @@ MonoBehaviour:
   clearPanel: {fileID: 236632015}
   gameOverPanel: {fileID: 1628099059}
   clearThreshold: 70
-  timeLimit: 5
+  timeLimit: 100
   currentTimer: 0
 --- !u!1 &236632015
 GameObject:
@@ -2776,6 +2776,7 @@ GameObject:
   - component: {fileID: 1035990920}
   - component: {fileID: 1035990921}
   - component: {fileID: 1035990922}
+  - component: {fileID: 1035990923}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -2870,6 +2871,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::bar
   bureikoBarValue: 0
   BureikoBar: {fileID: 1035990921}
+--- !u!114 &1035990923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035990919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c91f18992dc3a4daa822afe94fcc86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SliderTransition
+  mySlider: {fileID: 0}
+  TransitionTime: 0.3
 --- !u!1 &1051141818
 GameObject:
   m_ObjectHideFlags: 0
