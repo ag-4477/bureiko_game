@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; // シーン移動に必要
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,23 +11,27 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject gameOverPanel; // 失敗時に出すパネル
 
     [Header("ゲーム設定")]
-    public int clearThreshold = 70;
-    public float timeLimit = 30f;
+    public int clearThreshold = 50;
+    public float timeLimit = 10f;
 
-    private float timer;
+    [Header("デバッグ表示（読み取り専用）")]
+    [SerializeField] private float currentTimer; // Inspectorで残り時間を確認するため
+
+    private bool isTimerRunning = false;
     public static bool isGameActive { get; private set; } 
     private float maxLimit;
 
     void Start()
     {
-        // 最初はパネルを隠しておく
-        clearPanel.SetActive(false);
-        gameOverPanel.SetActive(false);
+        // パネルの初期化
+        if (clearPanel != null) clearPanel.SetActive(false);
+        if (gameOverPanel != null) gameOverPanel.SetActive(false);
 
-        // 時間とフラグのリセット
+        // 状態のリセット
         Time.timeScale = 1f; 
         isGameActive = true;   
-        timer = timeLimit;
+        isTimerRunning = true;
+        currentTimer = timeLimit;
 
         if (breikoBar != null && breikoBar.BureikoBar != null)
         {
@@ -37,49 +41,61 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (!isGameActive) return;
+        // ゲームがアクティブでない、またはタイマーが動いていないなら何もしない
+        if (!isGameActive || !isTimerRunning) return;
 
-        timer -= Time.deltaTime;
-
-        if (timer <= 0)
+        // タイマーのカウントダウン
+        currentTimer -= Time.deltaTime;
+        // Debug.Log(currentTimer);
+        // 0以下になった瞬間の判定
+        if (currentTimer <= 0)
         {
-            timer = 0;
-            // 時間終了時の判定
-            if (breikoBar.bureikoBarValue >= clearThreshold)
-                EndGame(true);
-            else
-                EndGame(false);
+            currentTimer = 0;
+            isTimerRunning = false; // 二重にEndGameが呼ばれないように停止
+
+            // クリア判定
+            CheckGameResult();
+        }
+    }
+
+    void CheckGameResult()
+    {
+        if (breikoBar != null && breikoBar.bureikoBarValue >= clearThreshold)
+        {
+            EndGame(true);
+        }
+        else
+        {
+            EndGame(false);
         }
     }
 
     void EndGame(bool isWin)
     {
         isGameActive = false;
-        Time.timeScale = 0f; // ゲームを停止
+        Time.timeScale = 0f; // ゲームを完全停止
 
         if (isWin) 
         {
             Debug.Log("CLEAR!");
-            clearPanel.SetActive(true); // クリアパネルを表示
+            if (clearPanel != null) clearPanel.SetActive(true);
         } 
         else 
         {
             Debug.Log("GAME OVER");
-            gameOverPanel.SetActive(true); // 失敗パネルを表示
+            if (gameOverPanel != null) gameOverPanel.SetActive(true);
         }
     }
 
-    // --- ボタンから呼ぶための関数 ---
+    // --- ボタン用関数 ---
 
     public void Retry()
     {
-        // 現在のシーンを最初から読み直す
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void GoToTitle()
     {
-        // "Title" という名前のシーンへ（シーン名は自分の設定に合わせてください）
         SceneManager.LoadScene("Title");
     }
 }

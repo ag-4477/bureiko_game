@@ -11,14 +11,22 @@ public class ButtonController : MonoBehaviour
     private Button[] buttonScripts;
 
     
+    // Start を Awake に変える
+    void Awake() 
+    {
+        // 他のスクリプトから呼ばれる前に、自分のコンポーネントを確保しておく
+        loader = gameObject.GetComponent<JsonPathLoader>();
+        
+        // ボタンの取得も Awake でやっておくと安全です
+        buttonScripts = Object.FindObjectsByType<Button>(FindObjectsSortMode.None);
+    }
+
     void Start()
     {
-        loader = gameObject.GetComponent<JsonPathLoader>();
-        buttonScripts = Object.FindObjectsByType<Button>(FindObjectsSortMode.None);
-        Debug.Log(buttonScripts);
+        // Debug用。Awakeで取得済みなので、ここでもう一度やる必要はありません。
         foreach (Button buttonScript in buttonScripts)
         {
-            Debug.Log(buttonScript);
+            Debug.Log("Found button: " + buttonScript.name);
         }
     }
 
@@ -40,10 +48,7 @@ public class ButtonController : MonoBehaviour
         int i = 0;
         foreach (Button buttonScript in buttonScripts)
         {
-            Debug.Log(currentQuestionId);
-            Debug.Log(i);
             buttonScript.UpdateButtonText(currentQuestionId, data.questions[currentQuestionId].questiondata[i].data.text);
-            Debug.Log(buttonScript.buttonName);
             i++;
         }
     }
