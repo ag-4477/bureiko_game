@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class bar : MonoBehaviour
+public class BreikoBar : MonoBehaviour
 {
     [SerializeField]
     public int bureikoBarValue;
@@ -9,10 +9,11 @@ public class bar : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // BureikoBar = gameObject;
         bureikoBarValue = 0;
         BureikoBar.value = bureikoBarValue;
     }
-    void UpdateBreikoValue(int score)
+    public void UpdateBreikoValue(int score)
     {
         bureikoBarValue += score;
         BureikoBar.value = bureikoBarValue;
