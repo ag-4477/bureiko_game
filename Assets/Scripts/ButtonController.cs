@@ -14,23 +14,25 @@ public class ButtonController : MonoBehaviour
     void Start()
     {
         loader = gameObject.GetComponent<JsonPathLoader>();
-        data = loader.gameData;
-        buttons = GameObject.FindGameObjectsWithTag("choices");
-        Debug.Log(buttons);
-
-        List<Button> scriptListTemp = new List<Button>();
-
-        foreach (GameObject button in buttons)
+        buttonScripts = Object.FindObjectsByType<Button>(FindObjectsSortMode.None);
+        Debug.Log(buttonScripts);
+        foreach (Button buttonScript in buttonScripts)
         {
-            Button buttonScript = button.GetComponent<Button>();
-            if(buttonScript != null)
-            {
-                scriptListTemp.Add(buttonScript);
-            }
+            Debug.Log(buttonScript);
         }
-        Debug.Log(scriptListTemp);
+    }
 
-        buttonScripts = scriptListTemp.ToArray();
+    public void LoadJson()
+    {
+        data = loader.gameData;
+        if(data != null)
+        {
+            Debug.Log("Data読み込みdone");
+        }
+        else
+        {
+            Debug.LogWarning("Data読み込み失敗");
+        }
     }
 
     public void NextBreiko(int currentQuestionId)
@@ -38,6 +40,8 @@ public class ButtonController : MonoBehaviour
         int i = 0;
         foreach (Button buttonScript in buttonScripts)
         {
+            Debug.Log(currentQuestionId);
+            Debug.Log(i);
             buttonScript.UpdateButtonText(currentQuestionId, data.questions[currentQuestionId].questiondata[i].data.text);
             Debug.Log(buttonScript.buttonName);
             i++;
