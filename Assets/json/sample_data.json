@@ -2,6 +2,7 @@
   "questions": [
     {
       "questionId": 0,
+      "bossText": "「おい、君。昨日の報告書の件なんだが、実は私の若い頃はだな…」",
       "questiondata": [
         { "id": 0, "data": { "text": "「その話、前も聞きましたよ」と遮る", "breikoScore": 1 } },
         { "id": 1, "data": { "text": "「今の話、3行でまとめ直してもらえます？」と要求する", "breikoScore": 2 } },
@@ -11,6 +12,7 @@
     },
     {
       "questionId": 1,
+      "bossText": "「（飲み会にて）ほら、サラダが来たぞ。みんなで分けて食べなさい」",
       "questiondata": [
         { "id": 4, "data": { "text": "「僕、野菜嫌いなんで全部食べていいですよ」", "breikoScore": 1 } },
         { "id": 5, "data": { "text": "「取り分けてくれるの待ってるんで。もっと甘やかして」", "breikoScore": 2 } },
@@ -20,6 +22,7 @@
     },
     {
       "questionId": 2,
+      "bossText": "「見てくれ、この間の連休に家族で行ったキャンプの写真だよ」",
       "questiondata": [
         { "id": 8, "data": { "text": "「あ、ネットでよく見るフリー素材に似た景色ですね」", "breikoScore": 1 } },
         { "id": 9, "data": { "text": "「（勝手にスワイプし）他に見せるべき面白い写真ないんすか？」", "breikoScore": 2 } },
@@ -29,6 +32,7 @@
     },
     {
       "questionId": 3,
+      "bossText": "「二次会は私の行きつけのスナックに行こう。趣があっていいんだ」",
       "questiondata": [
         { "id": 12, "data": { "text": "「次の店は、僕が満足できる場所を予約しといてください」", "breikoScore": 1 } },
         { "id": 13, "data": { "text": "「内装が実家より落ち着かないんすけど。センス昭和っすか？」", "breikoScore": 2 } },
@@ -38,6 +42,7 @@
     },
     {
       "questionId": 4,
+      "bossText": "「おっと、もうこんな時間か。じゃあ会計は…あー、財布はどこかな」",
       "questiondata": [
         { "id": 16, "data": { "text": "「財布出すの遅くないっすか？」と催促する", "breikoScore": 1 } },
         { "id": 17, "data": { "text": "「僕の分、係長の給料から引いといてもらえます？」", "breikoScore": 2 } },
@@ -47,6 +52,7 @@
     },
     {
       "questionId": 5,
+      "bossText": "「（社長室にて）君が噂の新人か。我が社のビジョンについて話そうか」",
       "questiondata": [
         { "id": 20, "data": { "text": "「社長って喋るの好きっすね。カラオケの機械に話せば？」", "breikoScore": 1 } },
         { "id": 21, "data": { "text": "「その話、あとでAIに要約させてメールで送ってください」", "breikoScore": 2 } },
@@ -56,6 +62,7 @@
     },
     {
       "questionId": 6,
+      "bossText": "「今日は特別に、時価三万円の特上寿司を用意させたんだ」",
       "questiondata": [
         { "id": 24, "data": { "text": "「高級食材って見た目グロいっすね。ファミレスの方がいいな」", "breikoScore": 1 } },
         { "id": 25, "data": { "text": "「あ、写真撮るんで社長どいてください。映えの邪魔です」", "breikoScore": 2 } },
@@ -65,6 +72,7 @@
     },
     {
       "questionId": 7,
+      "bossText": "「どうだね、このネクタイ。イタリアで特注した限定品なんだ」",
       "questiondata": [
         { "id": 28, "data": { "text": "「そのネクタイ、派手すぎて目がチカチカしますね」", "breikoScore": 1 } },
         { "id": 29, "data": { "text": "「結び方、古くないっすか？ 幼稚園児でももっとマシですよ」", "breikoScore": 2 } },
@@ -74,15 +82,17 @@
     },
     {
       "questionId": 8,
+      "bossText": "「ワインでも飲みたまえ。私が自ら注いであげようじゃないか」",
       "questiondata": [
         { "id": 32, "data": { "text": "「あ、氷入ってないとかありえないっす。社長、冷蔵庫どこ？」", "breikoScore": 1 } },
         { "id": 33, "data": { "text": "「（ストロー3本で）これが僕の中での最新トレンドっす」", "breikoScore": 2 } },
         { "id": 34, "data": { "text": "「注ぎ方、勢いなさすぎ！ 高い位置からバシャっといこう」", "breikoScore": 3 } },
-        { "id": 35, "selectedText": "「社長の注いだやつ、苦そうなんで、まず毒味してください」", "breikoScore": 5 }
+        { "id": 35, "data": { "text": "「社長の注いだやつ、苦そうなんで、まず毒味してください」", "breikoScore": 5 } }
       ]
     },
     {
       "questionId": 9,
+      "bossText": "「最後だ、君の将来の夢を聞かせてくれないか。期待しているよ」",
       "questiondata": [
         { "id": 36, "data": { "text": "「夢とか重いんで、とりあえず今のボーナスを倍にしてください」", "breikoScore": 1 } },
         { "id": 37, "data": { "text": "「寝て起きたら10億円降ってくる生活が理想っすね」", "breikoScore": 2 } },
@@ -92,6 +102,7 @@
     },
     {
       "questionId": 10,
+      "bossText": "「（ホワイトハウスにて）よく来た。世界の平和について議論しよう」",
       "questiondata": [
         { "id": 40, "data": { "text": "「世界の危機より、僕の通信制限解除が先決じゃないすか？」", "breikoScore": 1 } },
         { "id": 41, "data": { "text": "「平和とかどうでもいい。とりあえずポテチ開けてください」", "breikoScore": 2 } },
@@ -101,8 +112,9 @@
     },
     {
       "questionId": 11,
+      "bossText": "「この部屋にある調度品はすべて歴史的な価値があるものばかりだ」",
       "questiondata": [
-        { "id": 44, "data": { "text": "「なんか古いだけでセンスないっす。全部ニトリに変えません？」", "breikoScore": 1 } },
+        { "id": 44, "data": { "text": "「なんか古いだけでセンスないっす. 全部ニトリに変えません？」", "breikoScore": 1 } },
         { "id": 45, "data": { "text": "「これ、フリマに出したらホワイトハウスごと買えますかね？」", "breikoScore": 2 } },
         { "id": 46, "data": { "text": "「（椅子に足を乗せ）この椅子、座り心地微妙。買い替え時」", "breikoScore": 3 } },
         { "id": 47, "data": { "text": "「（シールを貼り）これでやっと現代アートっぽくなりましたよ」", "breikoScore": 5 } }
@@ -110,6 +122,7 @@
     },
     {
       "questionId": 12,
+      "bossText": "「国家の重要機密に触れる決断は、いつも孤独で苦しいものだ…」",
       "questiondata": [
         { "id": 48, "data": { "text": "「その悩み、とりあえずジャンケンで決めちゃえばスッキリします」", "breikoScore": 1 } },
         { "id": 49, "data": { "text": "「僕、難しい話を聞くと耳が勝手に閉じる仕様なんすよね」", "breikoScore": 2 } },
@@ -119,6 +132,7 @@
     },
     {
       "questionId": 13,
+      "bossText": "「さあ、この歴史的な同盟の署名式に参加してくれ。ペンはあるか？」",
       "questiondata": [
         { "id": 52, "data": { "text": "「名前書くの面倒なんで、僕の似顔絵のスタンプでいいっすか？」", "breikoScore": 1 } },
         { "id": 53, "data": { "text": "「これ、裏に僕のサイン書いたら価値上がりますかね？」", "breikoScore": 2 } },
@@ -128,11 +142,64 @@
     },
     {
       "questionId": 14,
+      "bossText": "「今日は有意義な時間だった。また会える日を楽しみにしているよ」",
       "questiondata": [
         { "id": 56, "data": { "text": "「次はSNSのDMで送ってくれれば既読はつけますから」", "breikoScore": 1 } },
         { "id": 57, "data": { "text": "「大統領、自撮りしてアイコンにします。許可は不要っすよね」", "breikoScore": 2 } },
         { "id": 58, "data": { "text": "「楽しかったっす！ ホワイトハウスのヘリで家まで送って」", "breikoScore": 3 } },
         { "id": 59, "data": { "text": "「大統領、割り勘で。ドル持ってないんで全額出しといて」", "breikoScore": 5 } }
+      ]
+    }
+  ],
+  "maefuri": [
+    {
+      "stageId": 0,
+      "textData": [
+        { "textId": 0, "data": { "text": "今日は係長に誘われて、仕事終わりに飲みに来たぞ。", "person": "あなた" } },
+        { "textId": 1, "data": { "text": "「まあ座れよ。今日は無礼講だ。何を言っても怒らないぞ！」", "person": "係長" } },
+        { "textId": 2, "data": { "text": "（無礼講……。その言葉、後悔させてやる。）", "person": "あなた" } }
+      ]
+    },
+    {
+      "stageId": 1,
+      "textData": [
+        { "textId": 0, "data": { "text": "実績が認められ、ついに社長室に招かれた。", "person": "あなた" } },
+        { "textId": 1, "data": { "text": "「よく来たな。我が社の未来のために、君の正直な意見を聞きたい。」", "person": "社長" } },
+        { "textId": 2, "data": { "text": "（正直に言いすぎて、会社がひっくり返っても知らないぞ。）", "person": "あなた" } }
+      ]
+    },
+    {
+      "stageId": 2,
+      "textData": [
+        { "textId": 0, "data": { "text": "外交ルートを通じて、なぜか大統領と対談することになった。", "person": "あなた" } },
+        { "textId": 1, "data": { "text": "「ミスター。世界の命運は君の言葉にかかっていると言っても過言ではない。」", "person": "大統領" } },
+        { "textId": 2, "data": { "text": "（世界平和より、僕のジョークのキレの方が大事なんだ。）", "person": "あなた" } }
+      ]
+    }
+  ],
+  "finish": [
+    {
+      "stageId": 0,
+      "textData": [
+        { "textId": 0, "data": { "text": "係長との飲み会が終わった。", "person": "あなた" } },
+        { "textId": 1, "data": { "text": "「……君。明日、ちょっと早めに私の席に来なさい。話がある。」", "person": "係長" } },
+        { "textId": 2, "data": { "text": "（お説教か、それとも伝説の始まりか……。）", "person": "あなた" } }
+      ]
+    },
+    {
+      "stageId": 1,
+      "textData": [
+        { "textId": 0, "data": { "text": "社長との面談が終わった。", "person": "あなた" } },
+        { "textId": 1, "data": { "text": "「……面白い。君のような人間は、我が社の歴史上初めてだよ。」", "person": "社長" } },
+        { "textId": 2, "data": { "text": "（とりあえず、クビにはなってなさそうだ。）", "person": "あなた" } }
+      ]
+    },
+    {
+      "stageId": 2,
+      "textData": [
+        { "textId": 0, "data": { "text": "大統領との対談が幕を閉じた。", "person": "あなた" } },
+        { "textId": 1, "data": { "text": "「オーマイガー。君のせいで世界情勢が非常にスリリングになったよ。」", "person": "大統領" } },
+        { "textId": 2, "data": { "text": "（ホワイトハウスの非常ベルが鳴っている気がするけど、気にしない。）", "person": "あなた" } }
       ]
     }
   ]
