@@ -48,10 +48,7 @@ public class ButtonController : MonoBehaviour
         int i = 0;
         foreach (Button buttonScript in buttonScripts)
         {
-            Debug.Log(currentQuestionId);
-            Debug.Log(i);
             buttonScript.UpdateButtonText(currentQuestionId, data.questions[currentQuestionId].questiondata[i].data.text);
-            Debug.Log(buttonScript.buttonName);
             i++;
         }
     }
