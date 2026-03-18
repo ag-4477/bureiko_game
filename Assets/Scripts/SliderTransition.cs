@@ -20,6 +20,6 @@ public class SliderTransition : MonoBehaviour
     public void ChangeSliderValue(int targetValue)
     {
         // 現在の値から targetValue まで、1.0秒かけて変化させる
-        mySlider.DOValue(targetValue, TransitionTime);
+        mySlider.DOValue(targetValue, TransitionTime).SetLink(gameObject);
     }
 }
