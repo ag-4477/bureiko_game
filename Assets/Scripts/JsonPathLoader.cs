@@ -17,6 +17,7 @@ public class JsonPathLoader : MonoBehaviour
             gameData = JsonUtility.FromJson<GameDataWrapper>(jsonText);
             Debug.Log("パス指定での読み込みに成功");
             gameObject.GetComponent<ScoreController>().LoadJson();
+            gameObject.GetComponent<ButtonController>().LoadJson();
             //Debug.Log(gameData.questions[0].questiondata[1].data.text);
         }
         else
