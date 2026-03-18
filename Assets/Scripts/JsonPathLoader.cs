@@ -7,18 +7,20 @@ public class JsonPathLoader : MonoBehaviour
     public GameDataWrapper gameData;
     void Start()
     {
-        string filePath = Path.Combine(Application.dataPath, "json", "sample_data.json");
+        string filePath = "json/sample_data";
 
-        if (File.Exists(filePath))
+        // ファイルの全内容を読み込む
+        TextAsset jsonFile = Resources.Load<TextAsset>(filePath);
+
+        if(jsonFile != null)
         {
-            // ファイルの全内容を読み込む
-            string jsonText = File.ReadAllText(filePath);
+            string jsonText = jsonFile.text;
             
             gameData = JsonUtility.FromJson<GameDataWrapper>(jsonText);
             Debug.Log("パス指定での読み込みに成功");
             gameObject.GetComponent<ScoreController>().LoadJson();
             gameObject.GetComponent<ButtonController>().LoadJson();
-            //Debug.Log(gameData.questions[0].questiondata[1].data.text);
+            //Debug.Log(gameData.questions[0].questiondata[1].data.text);            
         }
         else
         {
