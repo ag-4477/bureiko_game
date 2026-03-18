@@ -35,6 +35,8 @@ public class ScoreController : MonoBehaviour
             breikoBarScript.UpdateBreikoValue(buttonId);
             buttonControllerScript.NextBreiko(questionId);
             questionId++;
+            int breikoValue = breikoBarScript.bureikoBarValue;
+            Debug.Log(breikoValue);
         }
         else
         {
