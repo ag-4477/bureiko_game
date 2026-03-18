@@ -9,6 +9,7 @@ public class ButtonController : MonoBehaviour
     private GameDataWrapper data;
     private GameObject[] buttons;
     private Button[] buttonScripts;
+    private Text[] bossTextScripts;
 
     
     // Start を Awake に変える
@@ -19,6 +20,8 @@ public class ButtonController : MonoBehaviour
         
         // ボタンの取得も Awake でやっておくと安全です
         buttonScripts = Object.FindObjectsByType<Button>(FindObjectsSortMode.None);
+
+        bossTextScripts = Object.FindObjectsByType<Text>(FindObjectsSortMode.None);
     }
 
     void Start()
@@ -48,8 +51,16 @@ public class ButtonController : MonoBehaviour
         int i = 0;
         foreach (Button buttonScript in buttonScripts)
         {
-            buttonScript.UpdateButtonText(currentQuestionId, data.questions[currentQuestionId].questiondata[i].data.text);
+            buttonScript.UpdateButtonText(currentQuestionId, data.questions[currentQuestionId].questionSet.questiondata[i].data.text);
             i++;
+        }
+    }
+
+    public void DisplayBossText(int questionId)
+    {
+        foreach (Text bossTextScript in bossTextScripts)
+        {
+            bossTextScript.UpdateBossText(data.questions[questionId].questionSet.bossText);
         }
     }
 }
