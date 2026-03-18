@@ -54,6 +54,7 @@ public class ButtonController : MonoBehaviour
             buttonScript.UpdateButtonText(currentQuestionId, data.questions[currentQuestionId].questionSet.questiondata[i].data.text);
             i++;
         }
+        DisplayBossText(currentQuestionId);
     }
 
     public void DisplayBossText(int questionId)
