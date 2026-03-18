@@ -23,7 +23,7 @@ public class QuestionSet {
 [Serializable]
 public class QuestionNode {
     public int questionId;
-    public QuestionSet questiondata;
+    public QuestionSet questionSet;
 }
 
 [Serializable]
