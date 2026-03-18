@@ -181,9 +181,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreController
   breikoBar: {fileID: 1035990919}
+  gameManager: {fileID: 34545187}
   questionData:
     questions: []
   questionId: 0
+  timeLimit: 5
 --- !u!114 &34545186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,7 +214,7 @@ MonoBehaviour:
   clearPanel: {fileID: 236632015}
   gameOverPanel: {fileID: 1628099059}
   clearThreshold: 70
-  timeLimit: 5
+  timeLimit: 15
   currentTimer: 0
 --- !u!1 &236632015
 GameObject:

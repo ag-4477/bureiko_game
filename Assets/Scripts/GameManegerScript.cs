@@ -46,7 +46,6 @@ public class GameManager : MonoBehaviour
 
         // タイマーのカウントダウン
         currentTimer -= Time.deltaTime;
-        Debug.Log(currentTimer);
         // 0以下になった瞬間の判定
         if (currentTimer <= 0)
         {
@@ -58,21 +57,23 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void CheckGameResult()
+    public bool CheckGameResult()
     {
         if (breikoBar != null && breikoBar.bureikoBarValue >= clearThreshold)
         {
-            EndGame(true);
+            return true;
         }
         else
         {
-            EndGame(false);
+            return false; // 失敗
         }
     }
 
-    void EndGame(bool isWin)
+    public void EndGame(bool isWin)
     {
+        Debug.Log(isWin ? "ゲームクリア！" : "ゲームオーバー！");
         isGameActive = false;
+        isTimerRunning = false;
         Time.timeScale = 0f; // ゲームを完全停止
 
         if (isWin) 
