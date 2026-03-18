@@ -128,6 +128,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 34545183}
+  - component: {fileID: 34545185}
+  - component: {fileID: 34545184}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -150,6 +152,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &34545184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34545182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe49e9bc554c7b84e9f33ba7be4c5db6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JsonPathLoader
+  gameData:
+    questions: []
+  questionNumber: 0
+--- !u!114 &34545185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34545182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad04bdcf1be9691479e734053e1eeaf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScoreController
+  breikoBar: {fileID: 1035990919}
+  jsonPathLoader: {fileID: 34545182}
+  questionData:
+    questions: []
 --- !u!1 &323207694
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,7 +425,7 @@ GameObject:
   - component: {fileID: 364379753}
   m_Layer: 5
   m_Name: Button_B
-  m_TagString: Untagged
+  m_TagString: choices
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -414,7 +447,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 300, y: -150}
+  m_AnchoredPosition: {x: 250, y: -150}
   m_SizeDelta: {x: 261.3171, y: 64.1067}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &364379750
@@ -523,7 +556,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78033e51014e7194885c28d1922d6ee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonData
+  ScoreController: {fileID: 0}
   buttonName: 
+  id: 1
   tmpText: {fileID: 502031803}
 --- !u!1 &393725510
 GameObject:
@@ -677,7 +712,7 @@ GameObject:
   - component: {fileID: 403938141}
   m_Layer: 5
   m_Name: Button_A
-  m_TagString: Untagged
+  m_TagString: choices
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -747,7 +782,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 403938141}
-        m_TargetAssemblyTypeName: ButtonData, Assembly-CSharp
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
         m_MethodName: OnButtonClick
         m_Mode: 1
         m_Arguments:
@@ -808,7 +843,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78033e51014e7194885c28d1922d6ee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonData
+  ScoreController: {fileID: 0}
   buttonName: 
+  id: 0
   tmpText: {fileID: 393725512}
 --- !u!1 &410087039
 GameObject:
@@ -1599,7 +1636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.60751534, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1683,6 +1720,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1035990920}
   - component: {fileID: 1035990921}
+  - component: {fileID: 1035990922}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -1750,7 +1788,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 814099568}
   m_HandleRect: {fileID: 0}
@@ -1758,10 +1796,24 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 100
+  m_Value: 20
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1035990922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035990919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61adbc6a831cc8345be43a4e110fb095, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::bar
+  bureikoBarValue: 0
+  BureikoBar: {fileID: 1035990921}
 --- !u!1 &1177944567
 GameObject:
   m_ObjectHideFlags: 0
@@ -1856,7 +1908,7 @@ GameObject:
   - component: {fileID: 1204356185}
   m_Layer: 5
   m_Name: Button_C
-  m_TagString: Untagged
+  m_TagString: choices
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1987,7 +2039,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78033e51014e7194885c28d1922d6ee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonData
+  ScoreController: {fileID: 0}
   buttonName: 
+  id: 2
   tmpText: {fileID: 713365742}
 --- !u!1 &1416046784
 GameObject:
@@ -2113,7 +2167,7 @@ GameObject:
   - component: {fileID: 1556775744}
   m_Layer: 5
   m_Name: Button_D
-  m_TagString: Untagged
+  m_TagString: choices
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2135,7 +2189,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 300, y: -250}
+  m_AnchoredPosition: {x: 250, y: -250}
   m_SizeDelta: {x: 261.3171, y: 64.1067}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1556775741
@@ -2244,7 +2298,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78033e51014e7194885c28d1922d6ee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonData
+  ScoreController: {fileID: 0}
   buttonName: 
+  id: 3
   tmpText: {fileID: 651138580}
 --- !u!1 &1648809476
 GameObject:
