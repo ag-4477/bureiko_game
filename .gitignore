@@ -103,3 +103,6 @@ InitTestScene*.unity*
 
 # TextMeshPro
 /Assets/TextMesh Pro
+
+# TestBuild
+/Build_otherBranch
