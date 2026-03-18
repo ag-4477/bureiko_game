@@ -6,10 +6,10 @@ public class ScoreController : MonoBehaviour
     public GameObject jsonPathLoader;
     private JsonPathLoader jsonPathLoaderScript;
     public GameDataWrapper questionData;
-    private BreikoBar breikoBarScrit;
+    private BreikoBar breikoBarScript;
     void Start()
     {
-        breikoBarScrit = breikoBar.GetComponent<BreikoBar>();
+        breikoBarScript = breikoBar.GetComponent<BreikoBar>();
     }
     public void LoadJson()
     {
@@ -18,9 +18,9 @@ public class ScoreController : MonoBehaviour
     }
     public void ButtonPressed(int buttinId)
     {
-        if(breikoBarScrit != null)
+        if(breikoBarScript != null)
         {
-            breikoBarScrit.UpdateBreikoValue(buttinId);
+            breikoBarScript.UpdateBreikoValue(buttinId);
         }
         else
         {
@@ -32,7 +32,7 @@ public class ScoreController : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("対象にBreikoBarスクリプトがついていません！");
+            Debug.LogWarning("Data読み込み失敗");
         }
     }
 }
