@@ -5,23 +5,42 @@ public class ButtonController : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is createdd
     // int currentQuestionId;
-    public JsonPathLoader loader;
+    private JsonPathLoader loader;
     private GameDataWrapper data;
-    private List<Button> buttons;
+    private GameObject[] buttons;
+    private Button[] buttonScripts;
 
     
     void Start()
     {
         loader = gameObject.GetComponent<JsonPathLoader>();
         data = loader.gameData;
+        buttons = GameObject.FindGameObjectsWithTag("choices");
+        Debug.Log(buttons);
+
+        List<Button> scriptListTemp = new List<Button>();
+
+        foreach (GameObject button in buttons)
+        {
+            Button buttonScript = button.GetComponent<Button>();
+            if(buttonScript != null)
+            {
+                scriptListTemp.Add(buttonScript);
+            }
+        }
+        Debug.Log(scriptListTemp);
+
+        buttonScripts = scriptListTemp.ToArray();
     }
 
-    void NextBreiko(int currentQuestionId)
+    public void NextBreiko(int currentQuestionId)
     {
-        for (int i = 0; i < buttons.Count; i++)
+        int i = 0;
+        foreach (Button buttonScript in buttonScripts)
         {
-            buttons[i].UpdateButtonText(currentQuestionId, data.questions[currentQuestionId].questiondata[i].data.text);
-            Debug.Log(buttons[i].buttonName);
+            buttonScript.UpdateButtonText(currentQuestionId, data.questions[currentQuestionId].questiondata[i].data.text);
+            Debug.Log(buttonScript.buttonName);
+            i++;
         }
     }
 }

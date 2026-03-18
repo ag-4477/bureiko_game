@@ -3,29 +3,22 @@ using UnityEngine;
 public class ScoreController : MonoBehaviour
 {
     public GameObject breikoBar;
-    public GameObject jsonPathLoader;
+    // public GameObject jsonPathLoader;
     private JsonPathLoader jsonPathLoaderScript;
+    private ButtonController buttonControllerScript;
     public GameDataWrapper questionData;
     private BreikoBar breikoBarScript;
+    public int questionId;
     void Start()
     {
         breikoBarScript = breikoBar.GetComponent<BreikoBar>();
+        buttonControllerScript = gameObject.GetComponent<ButtonController>();
+        questionId = 0;
     }
     public void LoadJson()
     {
-        jsonPathLoaderScript = jsonPathLoader.GetComponent<JsonPathLoader>();
+        jsonPathLoaderScript = gameObject.GetComponent<JsonPathLoader>();
         questionData = jsonPathLoaderScript.gameData;
-    }
-    public void ButtonPressed(int buttinId)
-    {
-        if(breikoBarScript != null)
-        {
-            breikoBarScript.UpdateBreikoValue(buttinId);
-        }
-        else
-        {
-            Debug.LogWarning("対象にBreikoBarスクリプトがついていません！");
-        }
         if(questionData != null)
         {
             Debug.Log("Data読み込みdone");
@@ -33,6 +26,19 @@ public class ScoreController : MonoBehaviour
         else
         {
             Debug.LogWarning("Data読み込み失敗");
+        }
+    }
+    public void ButtonPressed(int buttonId)
+    {
+        if(breikoBarScript != null)
+        {
+            breikoBarScript.UpdateBreikoValue(buttonId);
+            buttonControllerScript.NextBreiko(questionId);
+            questionId++;
+        }
+        else
+        {
+            Debug.LogWarning("対象にBreikoBarスクリプトがついていません！");
         }
     }
 }
