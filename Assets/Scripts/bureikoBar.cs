@@ -6,6 +6,7 @@ public class BreikoBar : MonoBehaviour
     [SerializeField]
     public int bureikoBarValue;
     public Slider BureikoBar;
+    private SliderTransition sliderTransitionScript;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -13,9 +14,13 @@ public class BreikoBar : MonoBehaviour
         bureikoBarValue = 0;
         BureikoBar.value = bureikoBarValue;
     }
+    void Awake()
+    {
+        sliderTransitionScript = gameObject.GetComponent<SliderTransition>();
+    }
     public void UpdateBreikoValue(int score)
     {
         bureikoBarValue += score;
-        BureikoBar.value = bureikoBarValue;
+        sliderTransitionScript.ChangeSliderValue(bureikoBarValue);
     }
 }

@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
 
         // タイマーのカウントダウン
         currentTimer -= Time.deltaTime;
+        // Debug.Log(currentTimer);
         // 0以下になった瞬間の判定
         if (currentTimer <= 0)
         {
