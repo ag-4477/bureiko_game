@@ -4,23 +4,31 @@ public class ScoreController : MonoBehaviour
 {
     public GameObject breikoBar;
     public GameManager gameManager;
-    // public GameObject jsonPathLoader;
+    public TimeManager timeManager; // TimeManagerへの参照
+
     private JsonPathLoader jsonPathLoaderScript;
     private ButtonController buttonControllerScript;
     public GameDataWrapper questionData;
     private BreikoBar breikoBarScript;
     public int questionId;
-    public float timeLimit = 5.0f; // 制限時間（秒）
-    private float timer;           // 現在の経過時間
-    private bool isWaiting = false; // 入力待ち状態かどうか
+    private bool isWaiting = false;
+
     void Start()
     {
         breikoBarScript = breikoBar.GetComponent<BreikoBar>();
         buttonControllerScript = gameObject.GetComponent<ButtonController>();
         questionId = 0;
-        timer = 0f;
-        isWaiting = true;
+
+        if (timeManager != null)
+        {
+            // 時間切れイベント発生時に、自動的に引数-1で自分を呼ぶように登録
+            timeManager.OnTimeUp += () => ButtonPressed(-1);
+            
+            isWaiting = true;
+            timeManager.StartTimer();
+        }
     }
+
     public void LoadJson()
     {
         jsonPathLoaderScript = gameObject.GetComponent<JsonPathLoader>();
@@ -34,27 +42,15 @@ public class ScoreController : MonoBehaviour
             Debug.LogWarning("Data読み込み失敗");
         }
     }
-    void Update()
-    {
-        if (isWaiting)
-        {
-            timer += Time.deltaTime;
-            if (timer >= timeLimit)
-            {
-                Debug.Log("タイムアップ！次の問題へ");
-                NextQuestion(-1); // タイムアップ時はIDとして-1などを渡す（スコア加算なし）
-            }
-        }
-    }
 
+    // ボタンから呼ばれる、および時間切れ時に実行されるメイン処理
     public void ButtonPressed(int buttonId)
     {
-        if (!isWaiting) return; // すでに処理中なら受け付けない
-        NextQuestion(buttonId);
-    }
-    public void NextQuestion(int buttonId)
-    {
-        timer = 0f; // タイマーリセット
+        if (!isWaiting) return;
+
+        // 次のステップに進むのでタイマーをリセットして開始
+        timeManager.StartTimer();
+
         if(breikoBarScript != null)
         {
             // 1. ゲージの更新
@@ -63,35 +59,37 @@ public class ScoreController : MonoBehaviour
                 breikoBarScript.UpdateBreikoValue(buttonId);
             }
 
-            // 2. 爆発判定（5問終了より先に、爆発したかチェック）
+            // 2. 爆発判定
             int breikoValue = breikoBarScript.bureikoBarValue;
             if(breikoValue >= 100)
             {
                 Debug.Log("爆発！");
-                isWaiting = false;
-                if (gameManager != null) gameManager.EndGame(false);
-                return; // 爆発したらここで終了
+                EndGameSequence(false);
+                return;
             }
 
             // 3. 5問終了判定
-            // questionIdは0から始まるので、4問目の処理が終わって5になったら終了
             questionId++;
             if (questionId >= 5) 
             {
                 Debug.Log("5問終了！判定へ");
-                isWaiting = false;
-                
                 if (gameManager != null)
                 {
-                    // GameManager側のCheckGameResultを使って勝敗を決める
-                    bool win = gameManager.CheckGameResult();
-                    gameManager.EndGame(win);
+                    EndGameSequence(gameManager.CheckGameResult());
                 }
                 return;
             }
 
-            // 4. まだ5問未満なら次の問題をセット
+            // 4. 次の問題をセット
             buttonControllerScript.NextBreiko(questionId);
         }
+    }
+
+    // 終了処理の共通化
+    private void EndGameSequence(bool isWin)
+    {
+        isWaiting = false;
+        timeManager.StopTimer();
+        if (gameManager != null) gameManager.EndGame(isWin);
     }
 }
