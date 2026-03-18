@@ -58,21 +58,23 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void CheckGameResult()
+    public bool CheckGameResult()
     {
         if (breikoBar != null && breikoBar.bureikoBarValue >= clearThreshold)
         {
-            EndGame(true);
+            return true;
         }
         else
         {
-            EndGame(false);
+            return false; // 失敗
         }
     }
 
-    void EndGame(bool isWin)
+    public void EndGame(bool isWin)
     {
+        Debug.Log(isWin ? "ゲームクリア！" : "ゲームオーバー！");
         isGameActive = false;
+        isTimerRunning = false;
         Time.timeScale = 0f; // ゲームを完全停止
 
         if (isWin) 
