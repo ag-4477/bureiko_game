@@ -2,153 +2,183 @@
   "questions": [
     {
       "questionId": 0,
-      "bossText": "「おい、君。昨日の報告書の件なんだが、実は私の若い頃はだな…」",
-      "questiondata": [
-        { "id": 0, "data": { "text": "「その話、前も聞きましたよ」と遮る", "breikoScore": 5 } },
-        { "id": 1, "data": { "text": "「今の話、3行でまとめ直してもらえます？」と要求する", "breikoScore": 10 } },
-        { "id": 2, "data": { "text": "「話が長いんで、倍速再生していいすか？」とスマホを出す", "breikoScore": 20 } },
-        { "id": 3, "data": { "text": "「係長の話、教科書の隅の落書きくらい中身ないっすね」", "breikoScore": 30 } }
-      ]
+      "questionSet": {
+        "bossText": "「おい、君。昨日の報告書の件なんだが、実は私の若い頃はだな…」",
+        "questiondata": [
+          { "id": 0, "data": { "text": "「その話、前も聞きましたよ」と遮る", "breikoScore": 5 } },
+          { "id": 1, "data": { "text": "「今の話、3行でまとめ直してもらえます？」と要求する", "breikoScore": 10 } },
+          { "id": 2, "data": { "text": "「話が長いんで、倍速再生していいすか？」とスマホを出す", "breikoScore": 20 } },
+          { "id": 3, "data": { "text": "「係長の話、教科書の隅の落書きくらい中身ないっすね」", "breikoScore": 30 } }
+        ]
+      }
     },
     {
       "questionId": 1,
-      "bossText": "「（飲み会にて）ほら、サラダが来たぞ。みんなで分けて食べなさい」",
-      "questiondata": [
-        { "id": 4, "data": { "text": "「僕、野菜嫌いなんで全部食べていいですよ」", "breikoScore": 5 } },
-        { "id": 5, "data": { "text": "「取り分けてくれるの待ってるんで。もっと甘やかして」", "breikoScore": 10 } },
-        { "id": 6, "data": { "text": "「（ドレッシングを使い切り）これ、僕の適量なんすよね」", "breikoScore": 20 } },
-        { "id": 7, "data": { "text": "「盛り付け地味っすね。僕のセンスでリメイクします」", "breikoScore": 30 } }
-      ]
+      "questionSet": {
+        "bossText": "「（飲み会にて）ほら、サラダが来たぞ。みんなで分けて食べなさい」",
+        "questiondata": [
+          { "id": 4, "data": { "text": "「僕、野菜嫌いなんで全部食べていいですよ」", "breikoScore": 5 } },
+          { "id": 5, "data": { "text": "「取り分けてくれるの待ってるんで。もっと甘やかして」", "breikoScore": 10 } },
+          { "id": 6, "data": { "text": "「（ドレッシングを使い切り）これ、僕の適量なんすよね」", "breikoScore": 20 } },
+          { "id": 7, "data": { "text": "「盛り付け地味っすね。僕のセンスでリメイクします」", "breikoScore": 30 } }
+        ]
+      }
     },
     {
       "questionId": 2,
-      "bossText": "「見てくれ、この間の連休に家族で行ったキャンプの写真だよ」",
-      "questiondata": [
-        { "id": 8, "data": { "text": "「あ、ネットでよく見るフリー素材に似た景色ですね」", "breikoScore": 5 } },
-        { "id": 9, "data": { "text": "「（勝手にスワイプし）他に見せるべき面白い写真ないんすか？」", "breikoScore": 10 } },
-        { "id": 10, "data": { "text": "「画質悪いっすね。係長のスマホ、化石レベルの旧型ですよね」", "breikoScore": 20 } },
-        { "id": 11, "data": { "text": "「これを見る時間、僕の人生において何の意味があるんすか？」", "breikoScore": 30 } }
-      ]
+      "questionSet": {
+        "bossText": "「見てくれ、この間の連休に家族で行ったキャンプの写真だよ」",
+        "questiondata": [
+          { "id": 8, "data": { "text": "「あ、ネットでよく見るフリー素材に似た景色ですね」", "breikoScore": 5 } },
+          { "id": 9, "data": { "text": "「（勝手にスワイプし）他に見せるべき面白い写真ないんすか？」", "breikoScore": 10 } },
+          { "id": 10, "data": { "text": "「画質悪いっすね。係長のスマホ、化石レベルの旧型ですよね」", "breikoScore": 20 } },
+          { "id": 11, "data": { "text": "「これを見る時間、僕の人生において何の意味があるんすか？」", "breikoScore": 30 } }
+        ]
+      }
     },
     {
       "questionId": 3,
-      "bossText": "「二次会は私の行きつけのスナックに行こう。趣があっていいんだ」",
-      "questiondata": [
-        { "id": 12, "data": { "text": "「次の店は、僕が満足できる場所を予約しといてください」", "breikoScore": 5 } },
-        { "id": 13, "data": { "text": "「内装が実家より落ち着かないんすけど。センス昭和っすか？」", "breikoScore": 10 } },
-        { "id": 14, "data": { "text": "「（メニューを閉じ）一番高いやつ頼んでいいすか？ おごりで」", "breikoScore": 20 } },
-        { "id": 15, "data": { "text": "「ここ、いつも空いてていいっすね。人気ないのかな」", "breikoScore": 30 } }
-      ]
+      "questionSet": {
+        "bossText": "「二次会は私の行きつけのスナックに行こう。趣があっていいんだ」",
+        "questiondata": [
+          { "id": 12, "data": { "text": "「次の店は、僕が満足できる場所を予約しといてください」", "breikoScore": 5 } },
+          { "id": 13, "data": { "text": "「内装が実家より落ち着かないんすけど。センス昭和っすか？」", "breikoScore": 10 } },
+          { "id": 14, "data": { "text": "「（メニューを閉じ）一番高いやつ頼んでいいすか？ おごりで」", "breikoScore": 20 } },
+          { "id": 15, "data": { "text": "「ここ、いつも空いてていいっすね。人気ないのかな」", "breikoScore": 30 } }
+        ]
+      }
     },
     {
       "questionId": 4,
-      "bossText": "「おっと、もうこんな時間か. じゃあ会計は…あー、財布はどこかな」",
-      "questiondata": [
-        { "id": 16, "data": { "text": "「財布出すの遅くないっすか？」と催促する", "breikoScore": 5 } },
-        { "id": 17, "data": { "text": "「僕の分、係長の給料から引いといてもらえます？」", "breikoScore": 10 } },
-        { "id": 18, "data": { "text": "「領収書、自分の名前で切ってもらっていいすか？」", "breikoScore": 20 } },
-        { "id": 19, "data": { "text": "「ごちそうさま。じゃ、僕は友達と遊ぶんで、あとは任せました」", "breikoScore": 30 } }
-      ]
+      "questionSet": {
+        "bossText": "「おっと、もうこんな時間か. じゃあ会計は…あー、財布はどこかな」",
+        "questiondata": [
+          { "id": 16, "data": { "text": "「財布出すの遅くないっすか？」と催促する", "breikoScore": 5 } },
+          { "id": 17, "data": { "text": "「僕の分、係長の給料から引いといてもらえます？」", "breikoScore": 10 } },
+          { "id": 18, "data": { "text": "「領収書、自分の名前で切ってもらっていいすか？」", "breikoScore": 20 } },
+          { "id": 19, "data": { "text": "「ごちそうさま。じゃ、僕は友達と遊ぶんで、あとは任せました」", "breikoScore": 30 } }
+        ]
+      }
     },
     {
       "questionId": 5,
-      "bossText": "「（社長室にて）君が噂の新人か。我が社のビジョンについて話そうか」",
-      "questiondata": [
-        { "id": 20, "data": { "text": "「社長って喋るの好きっすね。カラオケの機械に話せば？」", "breikoScore": 5 } },
-        { "id": 21, "data": { "text": "「その話、あとでAIに要約させてメールで送ってください」", "breikoScore": 10 } },
-        { "id": 22, "data": { "text": "「（ウォッチ起動）今の話、何分かかるか測っていいすか？」", "breikoScore": 20 } },
-        { "id": 23, "data": { "text": "「（寝ながら）今の話、子守唄に最高でした。もう一回どうぞ」", "breikoScore": 30 } }
-      ]
+      "questionSet": {
+        "bossText": "「（社長室にて）君が噂の新人か。我が社のビジョンについて話そうか」",
+        "questiondata": [
+          { "id": 20, "data": { "text": "「社長って喋るの好きっすね。カラオケの機械に話せば？」", "breikoScore": 5 } },
+          { "id": 21, "data": { "text": "「その話、あとでAIに要約させてメールで送ってください」", "breikoScore": 10 } },
+          { "id": 22, "data": { "text": "「（ウォッチ起動）今の話、何分かかるか測っていいすか？」", "breikoScore": 20 } },
+          { "id": 23, "data": { "text": "「（寝ながら）今の話、子守唄に最高でした。もう一回どうぞ」", "breikoScore": 30 } }
+        ]
+      }
     },
     {
       "questionId": 6,
-      "bossText": "「今日は特別に、時価三万円の特上寿司を用意させたんだ」",
-      "questiondata": [
-        { "id": 24, "data": { "text": "「高級食材って見た目グロいっすね。ファミレスの方がいいな」", "breikoScore": 5 } },
-        { "id": 25, "data": { "text": "「あ、写真撮るんで社長どいてください。映えの邪魔です」", "breikoScore": 10 } },
-        { "id": 26, "data": { "text": "「これ一口でいけますね。社長の分も僕が試食しましょうか？」", "breikoScore": 20 } },
-        { "id": 27, "data": { "text": "「（持参のマヨをかけ）これでやっと食べられる味になります」", "breikoScore": 30 } }
-      ]
+      "questionSet": {
+        "bossText": "「今日は特別に、時価三万円の特上寿司を用意させたんだ」",
+        "questiondata": [
+          { "id": 24, "data": { "text": "「高級食材って見た目グロいっすね。ファミレスの方がいいな」", "breikoScore": 5 } },
+          { "id": 25, "data": { "text": "「あ、写真撮るんで社長どいてください。映えの邪魔です」", "breikoScore": 10 } },
+          { "id": 26, "data": { "text": "「これ一口でいけますね。社長の分も僕が試食しましょうか？」", "breikoScore": 20 } },
+          { "id": 27, "data": { "text": "「（持参のマヨをかけ）これでやっと食べられる味になります」", "breikoScore": 30 } }
+        ]
+      }
     },
     {
       "questionId": 7,
-      "bossText": "「どうだね、このネクタイ。イタリアで特注した限定品なんだ」",
-      "questiondata": [
-        { "id": 28, "data": { "text": "「そのネクタイ、派手すぎて目がチカチカしますね」", "breikoScore": 5 } },
-        { "id": 29, "data": { "text": "「結び方、古くないっすか？ 幼稚園児でももっとマシですよ」", "breikoScore": 10 } },
-        { "id": 30, "data": { "text": "「（タイを弾き）これ、僕の部屋のカーテンと同じ生地っすね」", "breikoScore": 20 } },
-        { "id": 31, "data": { "text": "「そのネクタイ、僕の鼻水拭くのに丁度いい柔らかさっすね」", "breikoScore": 30 } }
-      ]
+      "questionSet": {
+        "bossText": "「どうだね、このネクタイ。イタリアで特注した限定品なんだ」",
+        "questiondata": [
+          { "id": 28, "data": { "text": "「そのネクタイ、派手すぎて目がチカチカしますね」", "breikoScore": 5 } },
+          { "id": 29, "data": { "text": "「結び方、古くないっすか？ 幼稚園児でももっとマシですよ」", "breikoScore": 10 } },
+          { "id": 30, "data": { "text": "「（タイを弾き）これ、僕の部屋のカーテンと同じ生地っすね」", "breikoScore": 20 } },
+          { "id": 31, "data": { "text": "「そのネクタイ、僕の鼻水拭くのに丁度いい柔らかさっすね」", "breikoScore": 30 } }
+        ]
+      }
     },
     {
       "questionId": 8,
-      "bossText": "「ワインでも飲みたまえ。私が自ら注いであげようじゃないか」",
-      "questiondata": [
-        { "id": 32, "data": { "text": "「あ、氷入ってないとかありえないっす。社長、冷蔵庫どこ？」", "breikoScore": 5 } },
-        { "id": 33, "data": { "text": "「（ストロー3本で）これが僕の中での最新トレンドっす」", "breikoScore": 10 } },
-        { "id": 34, "data": { "text": "「注ぎ方、勢いなさすぎ！ 高い位置からバシャっといこう」", "breikoScore": 20 } },
-        { "id": 35, "data": { "text": "「社長の注いだやつ、苦そうなんで、まず毒味してください」", "breikoScore": 30 } }
-      ]
+      "questionSet": {
+        "bossText": "「ワインでも飲みたまえ。私が自ら注いであげようじゃないか」",
+        "questiondata": [
+          { "id": 32, "data": { "text": "「あ、氷入ってないとかありえないっす。社長、冷蔵庫どこ？」", "breikoScore": 5 } },
+          { "id": 33, "data": { "text": "「（ストロー3本で）これが僕の中での最新トレンドっす」", "breikoScore": 10 } },
+          { "id": 34, "data": { "text": "「注ぎ方、勢いなさすぎ！ 高い位置からバシャっといこう」", "breikoScore": 20 } },
+          { "id": 35, "data": { "text": "「社長の注いだやつ、苦そうなんで、まず毒味してください」", "breikoScore": 30 } }
+        ]
+      }
     },
     {
       "questionId": 9,
-      "bossText": "「最後だ、君の将来の夢を聞かせてくれないか。期待しているよ」",
-      "questiondata": [
-        { "id": 36, "data": { "text": "「夢とか重いんで、とりあえず今のボーナスを倍にしてください」", "breikoScore": 5 } },
-        { "id": 37, "data": { "text": "「寝て起きたら10億円降ってくる生活が理想っすね」", "breikoScore": 10 } },
-        { "id": 38, "data": { "text": "「社長になるより、社長を動かす黒幕になる方が楽そうなんで」", "breikoScore": 20 } },
-        { "id": 39, "data": { "text": "「来年には僕が社長なんで、早めに引退の準備しといてください」", "breikoScore": 30 } }
-      ]
+      "questionSet": {
+        "bossText": "「最後だ、君の将来の夢を聞かせてくれないか。期待しているよ」",
+        "questiondata": [
+          { "id": 36, "data": { "text": "「夢とか重いんで、とりあえず今のボーナスを倍にしてください」", "breikoScore": 5 } },
+          { "id": 37, "data": { "text": "「寝て起きたら10億円降ってくる生活が理想っすね」", "breikoScore": 10 } },
+          { "id": 38, "data": { "text": "「社長になるより、社長を動かす黒幕になる方が楽そうなんで」", "breikoScore": 20 } },
+          { "id": 39, "data": { "text": "「来年には僕が社長なんで、早めに引退の準備しといてください」", "breikoScore": 30 } }
+        ]
+      }
     },
     {
       "questionId": 10,
-      "bossText": "「（ホワイトハウスにて）よく来た。世界の平和について議論しよう」",
-      "questiondata": [
-        { "id": 40, "data": { "text": "「世界の危機より、僕の通信制限解除が先決じゃないすか？」", "breikoScore": 5 } },
-        { "id": 41, "data": { "text": "「平和とかどうでもいい。とりあえずポテチ開けてください」", "breikoScore": 10 } },
-        { "id": 42, "data": { "text": "「顔がおもちゃに似てますね。録画していいすか？」", "breikoScore": 20 } },
-        { "id": 43, "data": { "text": "「（タイを引っ張り）ほどけそう。僕が適当に結び直しますね」", "breikoScore": 30 } }
-      ]
+      "questionSet": {
+        "bossText": "「（ホワイトハウスにて）よく来た。世界の平和について議論しよう」",
+        "questiondata": [
+          { "id": 40, "data": { "text": "「世界の危機より、僕の通信制限解除が先決じゃないすか？」", "breikoScore": 5 } },
+          { "id": 41, "data": { "text": "「平和とかどうでもいい。とりあえずポテチ開けてください」", "breikoScore": 10 } },
+          { "id": 42, "data": { "text": "「顔がおもちゃに似てますね。録画していいすか？」", "breikoScore": 20 } },
+          { "id": 43, "data": { "text": "「（タイを引っ張り）ほどけそう。僕が適当に結び直しますね」", "breikoScore": 30 } }
+        ]
+      }
     },
     {
       "questionId": 11,
-      "bossText": "「この部屋にある調度品はすべて歴史的な価値があるものばかりだ」",
-      "questiondata": [
-        { "id": 44, "data": { "text": "「なんか古いだけでセンスないっす. 全部ニトリに変えません？」", "breikoScore": 5 } },
-        { "id": 45, "data": { "text": "「これ、フリマに出したらホワイトハウスごと買えますかね？」", "breikoScore": 10 } },
-        { "id": 46, "data": { "text": "「（椅子に足を乗せ）この椅子、座り心地微妙。買い替え時」", "breikoScore": 20 } },
-        { "id": 47, "data": { "text": "「（シールを貼り）これでやっと現代アートっぽくなりましたよ」", "breikoScore": 30 } }
-      ]
+      "questionSet": {
+        "bossText": "「この部屋にある調度品はすべて歴史的な価値があるものばかりだ」",
+        "questiondata": [
+          { "id": 44, "data": { "text": "「なんか古いだけでセンスないっす. 全部ニトリに変えません？」", "breikoScore": 5 } },
+          { "id": 45, "data": { "text": "「これ、フリマに出したらホワイトハウスごと買えますかね？」", "breikoScore": 10 } },
+          { "id": 46, "data": { "text": "「（椅子に足を乗せ）この椅子、座り心地微妙。買い替え時」", "breikoScore": 20 } },
+          { "id": 47, "data": { "text": "「（シールを貼り）これでやっと現代アートっぽくなりましたよ」", "breikoScore": 30 } }
+        ]
+      }
     },
     {
       "questionId": 12,
-      "bossText": "「国家の重要機密に触れる決断は、いつも孤独で苦しいものだ…」",
-      "questiondata": [
-        { "id": 48, "data": { "text": "「その悩み、とりあえずジャンケンで決めちゃえばスッキリします」", "breikoScore": 5 } },
-        { "id": 49, "data": { "text": "「僕、難しい話を聞くと耳が勝手に閉じる仕様なんすよね」", "breikoScore": 10 } },
-        { "id": 50, "data": { "text": "「大統領、真面目すぎ！ 肩の力抜いて、一緒に踊りましょう」", "breikoScore": 20 } },
-        { "id": 51, "data": { "text": "「大統領の悩み、僕のゲームのクエストより難易度低そうっすね」", "breikoScore": 30 } }
-      ]
+      "questionSet": {
+        "bossText": "「国家の重要機密に触れる決断は、いつも孤独で苦しいものだ…」",
+        "questiondata": [
+          { "id": 48, "data": { "text": "「その悩み、とりあえずジャンケンで決めちゃえばスッキリします」", "breikoScore": 5 } },
+          { "id": 49, "data": { "text": "「僕、難しい話を聞くと耳が勝手に閉じる仕様なんすよね」", "breikoScore": 10 } },
+          { "id": 50, "data": { "text": "「大統領、真面目すぎ！ 肩の力抜いて、一緒に踊りましょう」", "breikoScore": 20 } },
+          { "id": 51, "data": { "text": "「大統領の悩み、僕のゲームのクエストより難易度低そうっすね」", "breikoScore": 30 } }
+        ]
+      }
     },
     {
       "questionId": 13,
-      "bossText": "「さあ、この歴史的な同盟の署名式に参加してくれ。ペンはあるか？」",
-      "questiondata": [
-        { "id": 52, "data": { "text": "「名前書くの面倒なんで、僕の似顔絵のスタンプでいいっすか？」", "breikoScore": 5 } },
-        { "id": 53, "data": { "text": "「これ、裏に僕のサイン書いたら価値上がりますかね？」", "breikoScore": 10 } },
-        { "id": 54, "data": { "text": "「紙とペンの時代は終わりっす。音声入力にしましょう」", "breikoScore": 20 } },
-        { "id": 55, "data": { "text": "「サインする代わりに、大統領の専用機を週末貸してくれます？」", "breikoScore": 30 } }
-      ]
+      "questionSet": {
+        "bossText": "「さあ、この歴史的な同盟の署名式に参加してくれ。ペンはあるか？」",
+        "questiondata": [
+          { "id": 52, "data": { "text": "「名前書くの面倒なんで、僕の似顔絵のスタンプでいいっすか？」", "breikoScore": 5 } },
+          { "id": 53, "data": { "text": "「これ、裏に僕のサイン書いたら価値上がりますかね？」", "breikoScore": 10 } },
+          { "id": 54, "data": { "text": "「紙とペンの時代は終わりっす。音声入力にしましょう」", "breikoScore": 20 } },
+          { "id": 55, "data": { "text": "「サインする代わりに、大統領の専用機を週末貸してくれます？」", "breikoScore": 30 } }
+        ]
+      }
     },
     {
       "questionId": 14,
-      "bossText": "「今日は有意義な時間だった。また会える日を楽しみにしているよ」",
-      "questiondata": [
-        { "id": 56, "data": { "text": "「次はSNSのDMで送ってくれれば既読はつけますから」", "breikoScore": 5 } },
-        { "id": 57, "data": { "text": "「大統領、自撮りしてアイコンにします。許可は不要っすよね」", "breikoScore": 10 } },
-        { "id": 58, "data": { "text": "「楽しかったっす！ ホワイトハウスのヘリで家まで送って」", "breikoScore": 20 } },
-        { "id": 59, "data": { "text": "「大統領、割り勘で。ドル持ってないんで全額出しといて」", "breikoScore": 30 } }
-      ]
+      "questionSet": {
+        "bossText": "「今日は有意義な時間だった。また会える日を楽しみにしているよ」",
+        "questiondata": [
+          { "id": 56, "data": { "text": "「次はSNSのDMで送ってくれれば既読はつけますから」", "breikoScore": 5 } },
+          { "id": 57, "data": { "text": "「大統領、自撮りしてアイコンにします。許可は不要っすよね」", "breikoScore": 10 } },
+          { "id": 58, "data": { "text": "「楽しかったっす！ ホワイトハウスのヘリで家まで送って」", "breikoScore": 20 } },
+          { "id": 59, "data": { "text": "「大統領、割り勘で。ドル持ってないんで全額出しといて」", "breikoScore": 30 } }
+        ]
+      }
     }
   ],
   "maefuri": [

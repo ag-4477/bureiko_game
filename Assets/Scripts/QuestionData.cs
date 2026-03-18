@@ -13,10 +13,16 @@ public class OptionItem {
     public OptionData data;
 }
 
+public class QuestionSet {
+    public string bossText;
+    public List<OptionItem> questiondata;
+}
+
+
 [Serializable]
 public class QuestionNode {
     public int questionId;
-    public List<OptionItem> questiondata;
+    public QuestionSet questiondata;
 }
 
 [Serializable]
