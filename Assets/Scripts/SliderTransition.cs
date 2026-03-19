@@ -5,7 +5,7 @@ using DG.Tweening;
 public class SliderTransition : MonoBehaviour
 {
     public Slider mySlider;
-    public float TransitionTime;
+    public float TransitionTime = 0.3f;
 
     void Awake()
     {
