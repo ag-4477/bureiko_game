@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 34545184}
   - component: {fileID: 34545186}
   - component: {fileID: 34545187}
+  - component: {fileID: 34545188}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -168,6 +169,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::JsonPathLoader
   gameData:
     questions: []
+    maefuri: []
+    result: []
 --- !u!114 &34545185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,6 +188,8 @@ MonoBehaviour:
   timeManegerObject: {fileID: 726518196}
   questionData:
     questions: []
+    maefuri: []
+    result: []
   questionId: 0
 --- !u!114 &34545186
 MonoBehaviour:
@@ -216,6 +221,18 @@ MonoBehaviour:
   clearThreshold: 70
   timeLimit: 100
   currentTimer: 0
+--- !u!114 &34545188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34545182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bedbd193bd5d4954bb447da9e1235082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonController
 --- !u!1 &236632015
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,7 +818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonData
   ScoreController: {fileID: 0}
   buttonName: 
-  id: 1
+  id: 0
   tmpText: {fileID: 502031803}
 --- !u!1 &393725510
 GameObject:
@@ -1364,7 +1381,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7176642305683230283, guid: 607f1d9c82d601a44944670ee505cde1, type: 3}
+  m_Sprite: {fileID: -7176642305683230283, guid: 2dfdd22a7566c934e934e054f451eb39, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2337,8 +2354,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u3042\u308A\u304C\u305F\u3044\u304A\u8A00\u8449"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a39268e14f3f2714c9e14b3f5f0c66f8, type: 2}
-  m_sharedMaterial: {fileID: -4603223826010984149, guid: a39268e14f3f2714c9e14b3f5f0c66f8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 555b93447c9bc374680fa2712882882e, type: 2}
+  m_sharedMaterial: {fileID: -2507590811533914889, guid: 555b93447c9bc374680fa2712882882e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2362,8 +2379,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2426,6 +2443,7 @@ GameObject:
   - component: {fileID: 797622058}
   - component: {fileID: 797622060}
   - component: {fileID: 797622059}
+  - component: {fileID: 797622061}
   m_Layer: 4
   m_Name: Man
   m_TagString: Untagged
@@ -2472,7 +2490,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8394036614062001802, guid: aa0415a3826b4bb499f336ce77136db7, type: 3}
+  m_Sprite: {fileID: 4606157284126940538, guid: 8df012a935607364d90160d66c6041b3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2490,6 +2508,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 797622057}
   m_CullTransparentMesh: 1
+--- !u!114 &797622061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797622057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b70ad7ee894be48b2f319c5647a98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChangeCharactorImage
+  sr: {fileID: 0}
 --- !u!1 &814099567
 GameObject:
   m_ObjectHideFlags: 0
@@ -3372,7 +3403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonData
   ScoreController: {fileID: 0}
   buttonName: 
-  id: 2
+  id: 0
   tmpText: {fileID: 713365742}
 --- !u!1 &1416046784
 GameObject:
@@ -3808,7 +3839,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonData
   ScoreController: {fileID: 0}
   buttonName: 
-  id: 3
+  id: 0
   tmpText: {fileID: 651138580}
 --- !u!1 &1628099059
 GameObject:
@@ -3973,6 +4004,7 @@ GameObject:
   - component: {fileID: 2125463237}
   - component: {fileID: 2125463239}
   - component: {fileID: 2125463238}
+  - component: {fileID: 2125463240}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -4038,6 +4070,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125463236}
   m_CullTransparentMesh: 1
+--- !u!114 &2125463240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125463236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 747a23cc90e688f41aaff2f805769b92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueText
+  id: 0
+  bossMessage: 
+  BossText: {fileID: 793031530}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

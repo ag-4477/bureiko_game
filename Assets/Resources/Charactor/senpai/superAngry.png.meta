@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 607f1d9c82d601a44944670ee505cde1
+guid: 2b4c7adb50dd9824e8b124c1cd44c85b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7176642305683230283
-    second: bar_bokashi_0
+      213: -6157206983832667091
+    second: superAngry_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bar_bokashi_0
+      name: superAngry_0
       rect:
         serializedVersion: 2
-        x: 62
-        y: 0
-        width: 4014
-        height: 2371
+        x: 113
+        y: 61
+        width: 1897
+        height: 2466
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5b1f5b1b8d1776c90800000000000000
-      internalID: -7176642305683230283
+      spriteID: d2c7918ded43d8aa0800000000000000
+      internalID: -6157206983832667091
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      bar_bokashi_0: -7176642305683230283
+      superAngry_0: -6157206983832667091
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

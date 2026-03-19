@@ -9,7 +9,7 @@ public class ButtonController : MonoBehaviour
     private GameDataWrapper data;
     private GameObject[] buttons;
     private Button[] buttonScripts;
-    private Text[] bossTextScripts;
+    private DialogueText[] bossTextScripts;
 
     
     // Start を Awake に変える
@@ -21,7 +21,7 @@ public class ButtonController : MonoBehaviour
         // ボタンの取得も Awake でやっておくと安全です
         buttonScripts = Object.FindObjectsByType<Button>(FindObjectsSortMode.None);
 
-        bossTextScripts = Object.FindObjectsByType<Text>(FindObjectsSortMode.None);
+        bossTextScripts = Object.FindObjectsByType<DialogueText>(FindObjectsSortMode.None);
     }
 
     void Start()
@@ -59,7 +59,7 @@ public class ButtonController : MonoBehaviour
 
     public void DisplayBossText(int questionId)
     {
-        foreach (Text bossTextScript in bossTextScripts)
+        foreach (DialogueText bossTextScript in bossTextScripts)
         {
             bossTextScript.UpdateBossText(data.questions[questionId].questionSet.bossText);
         }
