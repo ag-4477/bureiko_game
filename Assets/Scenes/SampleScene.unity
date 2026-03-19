@@ -132,7 +132,6 @@ GameObject:
   - component: {fileID: 34545184}
   - component: {fileID: 34545186}
   - component: {fileID: 34545187}
-  - component: {fileID: 34545188}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -221,18 +220,6 @@ MonoBehaviour:
   clearThreshold: 70
   timeLimit: 100
   currentTimer: 0
---- !u!114 &34545188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 34545182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bedbd193bd5d4954bb447da9e1235082, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ButtonController
 --- !u!1 &236632015
 GameObject:
   m_ObjectHideFlags: 0
