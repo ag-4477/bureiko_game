@@ -23,7 +23,7 @@ public class ScoreController : MonoBehaviour
     void Start()
     {
         isWaiting = false;
-        questionId = 0;
+        questionId = 0; 
 
         if (timeManager != null)
         {
@@ -67,7 +67,9 @@ public class ScoreController : MonoBehaviour
             // 1. ゲージの更新
             if (buttonId >= 0)
             {
-                breikoBarScript.UpdateBreikoValue(buttonId);
+                Debug.Log("qustionId : "+questionId+"buttonId : "+buttonId);
+                int breikoScore = questionData.questions[questionId].questionSet.questiondata[buttonId].data.breikoScore;
+                breikoBarScript.UpdateBreikoValue(breikoScore);
             }
 
             // 2. 爆発判定
@@ -93,6 +95,10 @@ public class ScoreController : MonoBehaviour
 
             // 4. 次の問題をセット
             buttonControllerScript.NextBreiko(questionId);
+        }
+        else
+        {
+            Debug.Log("breikobarScriptがありません！");
         }
     }
 
