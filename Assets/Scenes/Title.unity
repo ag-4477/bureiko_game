@@ -547,8 +547,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
+      - m_Target: {fileID: 918049603}
+        m_TargetAssemblyTypeName: SceneChangeTitle, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 1
         m_Arguments:
@@ -736,6 +736,7 @@ GameObject:
   m_Component:
   - component: {fileID: 918049601}
   - component: {fileID: 918049602}
+  - component: {fileID: 918049603}
   m_Layer: 0
   m_Name: GameSystem
   m_TagString: Untagged
@@ -768,6 +769,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 578f389f032990d4cb24b52bdc64a974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneChangeTitle
+--- !u!114 &918049603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918049599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cde13542d5d6134196f361def039d3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneChangeTitle
   sceneName: maefuri
