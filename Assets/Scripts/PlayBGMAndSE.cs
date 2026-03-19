@@ -78,4 +78,12 @@ public class SoundManager : MonoBehaviour
             Debug.LogWarning($"SE: {soundName} が見つかりません");
         }
     }
+    // BGMを停止する
+    public void StopBGM()
+    {
+        if (bgmSource != null)
+        {
+            bgmSource.Stop();
+        }
+    }
 }

@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        SoundManager.Instance.StopBGM();
         SoundManager.Instance.PlayBGM("RPG_Battle_04_BGM");
         // パネルの初期化
         if (clearPanel != null) clearPanel.SetActive(false);
@@ -73,6 +74,7 @@ public class GameManager : MonoBehaviour
 
     public void EndGame(bool isWin)
     {
+        SoundManager.Instance.StopBGM();
         Debug.Log(isWin ? "ゲームクリア！" : "ゲームオーバー！");
         isGameActive = false;
         isTimerRunning = false;
@@ -81,6 +83,7 @@ public class GameManager : MonoBehaviour
         if (isWin) 
         {
             Debug.Log("CLEAR!");
+            SoundManager.Instance.PlaySE("stageClearSE");
             if (clearPanel != null) clearPanel.SetActive(true);
         } 
         else 
