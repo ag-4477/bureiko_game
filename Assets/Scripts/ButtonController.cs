@@ -51,7 +51,7 @@ public class ButtonController : MonoBehaviour
         int i = 0;
         foreach (Button buttonScript in buttonScripts)
         {
-            buttonScript.UpdateButtonText(currentQuestionId, data.questions[currentQuestionId].questionSet.questiondata[i].data.text);
+            buttonScript.UpdateButtonText(i, data.questions[currentQuestionId].questionSet.questiondata[i].data.text);
             i++;
         }
         DisplayBossText(currentQuestionId);
