@@ -3,9 +3,10 @@ using UnityEngine;
 public class ScoreController : MonoBehaviour
 {
     public GameObject breikoBar;
-    public GameManager gameManager;
+    private GameManager gameManager;
     private TimeManager timeManager; // TimeManagerへの参照
     public GameObject timeManegerObject;
+    public GameObject gameManegerObject;
 
     private JsonPathLoader jsonPathLoaderScript;
     private ButtonController buttonControllerScript;
@@ -17,6 +18,7 @@ public class ScoreController : MonoBehaviour
     void Awake()
     {
         timeManager = timeManegerObject.GetComponent<TimeManager>();
+        gameManager = gameManegerObject.GetComponent<GameManager>();
         breikoBarScript = breikoBar.GetComponent<BreikoBar>();
         buttonControllerScript = gameObject.GetComponent<ButtonController>();
     }
