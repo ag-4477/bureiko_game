@@ -3,60 +3,60 @@
     {
       "questionId": 0,
       "questionSet": {
-        "bossText": "「おい、君。昨日の報告書の件なんだが、実は私の若い頃はだな…」",
+        "bossText": "「俺の若かった頃の苦労話を聞いてくれ」",
         "questiondata": [
-          { "id": 0, "data": { "text": "「その話、前も聞きましたよ」と遮る", "breikoScore": 5 } },
-          { "id": 1, "data": { "text": "「今の話、3行でまとめ直してもらえます？」と要求する", "breikoScore": 10 } },
-          { "id": 2, "data": { "text": "「話が長いんで、倍速再生していいすか？」とスマホを出す", "breikoScore": 20 } },
-          { "id": 3, "data": { "text": "「係長の話、教科書の隅の落書きくらい中身ないっすね」", "breikoScore": 30 } }
+          { "id": 0, "data": { "text": "「その話、前も聞きましたよ」", "breikoScore": 5 } },
+          { "id": 1, "data": { "text": "「今の話、3行でまとめ直してもらえます？」", "breikoScore": 10 } },
+          { "id": 2, "data": { "text": "「話が長いんで、倍速再生していいすか？」", "breikoScore": 20 } },
+          { "id": 3, "data": { "text": "「先輩の話、教科書の隅の落書きくらい中身ないっすね」", "breikoScore": 30 } }
         ]
       }
     },
     {
       "questionId": 1,
       "questionSet": {
-        "bossText": "「（飲み会にて）ほら、サラダが来たぞ。みんなで分けて食べなさい」",
+        "bossText": "「この店、落ち着いてていいだろう。俺のお気に入りなんだ」",
         "questiondata": [
-          { "id": 4, "data": { "text": "「僕、野菜嫌いなんで全部食べていいですよ」", "breikoScore": 5 } },
-          { "id": 5, "data": { "text": "「取り分けてくれるの待ってるんで。もっと甘やかして」", "breikoScore": 10 } },
-          { "id": 6, "data": { "text": "「（ドレッシングを使い切り）これ、僕の適量なんすよね」", "breikoScore": 20 } },
-          { "id": 7, "data": { "text": "「盛り付け地味っすね。僕のセンスでリメイクします」", "breikoScore": 30 } }
+          { "id": 4, "data": { "text": "「次の店は、僕が満足できる場所を予約しといてください」", "breikoScore": 5 } },
+          { "id": 5, "data": { "text": "「センス古いっすね」", "breikoScore": 10 } },
+          { "id": 6, "data": { "text": "「一番高いやつ頼んでいいすか？ おごりで」", "breikoScore": 20 } },
+          { "id": 7, "data": { "text": "「ここ、いつも空いてていいっすね。人気ないのかな」", "breikoScore": 30 } }
         ]
       }
     },
     {
       "questionId": 2,
       "questionSet": {
-        "bossText": "「見てくれ、この間の連休に家族で行ったキャンプの写真だよ」",
+        "bossText": "「俺の酒が飲めないのか？一杯くらい付き合えよ！」",
         "questiondata": [
-          { "id": 8, "data": { "text": "「あ、ネットでよく見るフリー素材に似た景色ですね」", "breikoScore": 5 } },
-          { "id": 9, "data": { "text": "「（勝手にスワイプし）他に見せるべき面白い写真ないんすか？」", "breikoScore": 10 } },
-          { "id": 10, "data": { "text": "「画質悪いっすね。係長のスマホ、化石レベルの旧型ですよね」", "breikoScore": 20 } },
-          { "id": 11, "data": { "text": "「これを見る時間、僕の人生において何の意味があるんすか？」", "breikoScore": 30 } }
+          { "id": 8, "data": { "text": "「烏龍茶ください」", "breikoScore": 5 } },
+          { "id": 9, "data": { "text": "「普通にアルハラっすね」", "breikoScore": 10 } },
+          { "id": 10, "data": { "text": "「あ、僕の肝臓、今日は定休日なんで」", "breikoScore": 20 } },
+          { "id": 11, "data": { "text": "「先輩のメンツ、アルコールでしか保てないんですか？」", "breikoScore": 30 } }
         ]
       }
     },
     {
       "questionId": 3,
       "questionSet": {
-        "bossText": "「二次会は私の行きつけのスナックに行こう。趣があっていいんだ」",
+        "bossText": "「俺の若い頃は徹夜してでも終わらせたもんだぞ！」",
         "questiondata": [
-          { "id": 12, "data": { "text": "「次の店は、僕が満足できる場所を予約しといてください」", "breikoScore": 5 } },
-          { "id": 13, "data": { "text": "「内装が実家より落ち着かないんすけど。センス昭和っすか？」", "breikoScore": 10 } },
-          { "id": 14, "data": { "text": "「（メニューを閉じ）一番高いやつ頼んでいいすか？ おごりで」", "breikoScore": 20 } },
-          { "id": 15, "data": { "text": "「ここ、いつも空いてていいっすね。人気ないのかな」", "breikoScore": 30 } }
+          { "id": 12, "data": { "text": "「へぇ、昔は効率が悪かったんですね」", "breikoScore": 5 } },
+          { "id": 13, "data": { "text": "「その根性論、令和では非推奨ですよ」", "breikoScore": 10 } },
+          { "id": 14, "data": { "text": "「タイパ、意識していきましょう」", "breikoScore": 20 } },
+          { "id": 15, "data": { "text": "「仕事が遅かった告白、勇気ありますね」", "breikoScore": 30 } }
         ]
       }
     },
     {
       "questionId": 4,
       "questionSet": {
-        "bossText": "「おっと、もうこんな時間か. じゃあ会計は…あー、財布はどこかな」",
+        "bossText": "「おっと、もうこんな時間か。そろそろお会計にしよう」",
         "questiondata": [
           { "id": 16, "data": { "text": "「財布出すの遅くないっすか？」と催促する", "breikoScore": 5 } },
-          { "id": 17, "data": { "text": "「僕の分、係長の給料から引いといてもらえます？」", "breikoScore": 10 } },
+          { "id": 17, "data": { "text": "「僕の分、先輩の給料から引いといてもらえます？」", "breikoScore": 10 } },
           { "id": 18, "data": { "text": "「領収書、自分の名前で切ってもらっていいすか？」", "breikoScore": 20 } },
-          { "id": 19, "data": { "text": "「ごちそうさま。じゃ、僕は友達と遊ぶんで、あとは任せました」", "breikoScore": 30 } }
+          { "id": 19, "data": { "text": "「ごちそうさま。僕は友達と遊ぶんで、あとは任せました」", "breikoScore": 30 } }
         ]
       }
     },
@@ -185,8 +185,8 @@
     {
       "stageId": 0,
       "textData": [
-        { "textId": 0, "data": { "text": "今日は係長に誘われて、仕事終わりに飲みに来たぞ。", "person": "あなた" } },
-        { "textId": 1, "data": { "text": "「まあ座れよ。今日は無礼講だ。何を言っても怒らないぞ！」", "person": "係長" } },
+        { "textId": 0, "data": { "text": "今日は先輩に誘われて、仕事終わりに飲みに来たぞ。", "person": "あなた" } },
+        { "textId": 1, "data": { "text": "「まあ座れよ。今日は無礼講だ。何を言っても怒らないぞ！」", "person": "先輩" } },
         { "textId": 2, "data": { "text": "（無礼講……。その言葉、後悔させてやる。）", "person": "あなた" } }
       ]
     },
@@ -211,8 +211,8 @@
     {
       "stageId": 0,
       "textData": [
-        { "textId": 0, "data": { "text": "係長との飲み会が終わった。", "person": "あなた" } },
-        { "textId": 1, "data": { "text": "「……君。明日、ちょっと早めに私の席に来なさい。話がある。」", "person": "係長" } },
+        { "textId": 0, "data": { "text": "先輩との飲み会が終わった。", "person": "あなた" } },
+        { "textId": 1, "data": { "text": "「……君。明日、ちょっと早めに私の席に来なさい。話がある。」", "person": "先輩" } },
         { "textId": 2, "data": { "text": "（お説教か、それとも伝説の始まりか……。）", "person": "あなた" } }
       ]
     },
