@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using DG.Tweening;
 public class ScoreController : MonoBehaviour
 {
     public GameObject breikoBar;
@@ -77,11 +77,14 @@ public class ScoreController : MonoBehaviour
 
             // 2. 爆発判定
             int breikoValue = breikoBarScript.bureikoBarValue;
+            Debug.Log(breikoValue);
             if(breikoValue >= 100)
             {
-                Debug.Log("爆発！");
-                SoundManager.Instance.PlaySE("bombSE");
-                EndGameSequence(false);
+                DOVirtual.DelayedCall(0.4f, () => {
+                    Debug.Log("爆発！");
+                    SoundManager.Instance.PlaySE("bombSE");
+                    EndGameSequence(false);
+                });
                 return;
             }
 
@@ -89,11 +92,13 @@ public class ScoreController : MonoBehaviour
             questionId++;
             if (questionId >= 5) 
             {
-                Debug.Log("5問終了！判定へ");
-                if (gameManager != null)
-                {
-                    EndGameSequence(gameManager.CheckGameResult());
-                }
+                DOVirtual.DelayedCall(0.5f, () => {
+                    Debug.Log("5問終了！判定へ");
+                    if (gameManager != null)
+                    {
+                        EndGameSequence(gameManager.CheckGameResult());
+                    }
+                });
                 return;
             }
 
