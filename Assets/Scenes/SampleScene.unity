@@ -169,6 +169,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::JsonPathLoader
   gameData:
     questions: []
+    maefuri: []
+    result: []
 --- !u!114 &34545185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,6 +188,8 @@ MonoBehaviour:
   timeManegerObject: {fileID: 726518196}
   questionData:
     questions: []
+    maefuri: []
+    result: []
   questionId: 0
 --- !u!114 &34545186
 MonoBehaviour:
@@ -217,6 +221,18 @@ MonoBehaviour:
   clearThreshold: 70
   timeLimit: 100
   currentTimer: 0
+--- !u!114 &34545188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34545182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bedbd193bd5d4954bb447da9e1235082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonController
 --- !u!1 &236632015
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,19 +443,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 311319875}
   m_CullTransparentMesh: 1
-  questionId: 0
---- !u!114 &34545188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 34545182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bedbd193bd5d4954bb447da9e1235082, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ButtonController
 --- !u!1 &323207694
 GameObject:
   m_ObjectHideFlags: 0
@@ -2351,8 +2354,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u3042\u308A\u304C\u305F\u3044\u304A\u8A00\u8449"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a39268e14f3f2714c9e14b3f5f0c66f8, type: 2}
-  m_sharedMaterial: {fileID: -4603223826010984149, guid: a39268e14f3f2714c9e14b3f5f0c66f8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 555b93447c9bc374680fa2712882882e, type: 2}
+  m_sharedMaterial: {fileID: -2507590811533914889, guid: 555b93447c9bc374680fa2712882882e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2376,8 +2379,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4001,6 +4004,7 @@ GameObject:
   - component: {fileID: 2125463237}
   - component: {fileID: 2125463239}
   - component: {fileID: 2125463238}
+  - component: {fileID: 2125463240}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -4066,6 +4070,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125463236}
   m_CullTransparentMesh: 1
+--- !u!114 &2125463240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125463236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 747a23cc90e688f41aaff2f805769b92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueText
+  id: 0
+  bossMessage: 
+  BossText: {fileID: 793031530}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
