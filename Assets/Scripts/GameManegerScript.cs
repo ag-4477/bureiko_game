@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        SoundManager.Instance.PlayBGM("RPG_Battle_04_BGM");
         // パネルの初期化
         if (clearPanel != null) clearPanel.SetActive(false);
         if (gameOverPanel != null) gameOverPanel.SetActive(false);
