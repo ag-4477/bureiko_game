@@ -61,6 +61,7 @@ public class ScoreController : MonoBehaviour
 
         // 次のステップに進むのでタイマーをリセットして開始
         timeManager.StartTimer();
+        SoundManager.Instance.PlaySE("jakinSE");
 
         if(breikoBarScript != null)
         {
@@ -77,6 +78,7 @@ public class ScoreController : MonoBehaviour
             if(breikoValue >= 100)
             {
                 Debug.Log("爆発！");
+                SoundManager.Instance.PlaySE("bombSE");
                 EndGameSequence(false);
                 return;
             }
