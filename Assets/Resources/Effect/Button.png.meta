@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 832375d4b2ad63f4c90b6aede9b062ab
+guid: 975513ef477eb794f8414ad80057042e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -685363497309863077
-    second: osake_man2_angry_0
+      213: 649223268058989734
+    second: Button_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: osake_man2_angry_0
+      name: Button_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 8
-        width: 504
-        height: 758
+        x: 0
+        y: 46
+        width: 502
+        height: 173
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b5383d8c7891d76f0800000000000000
-      internalID: -685363497309863077
+      spriteID: 6a403906f11820900800000000000000
+      internalID: 649223268058989734
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      osake_man2_angry_0: -685363497309863077
+      Button_0: 649223268058989734
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
