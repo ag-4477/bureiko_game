@@ -89,6 +89,7 @@ public class GameManager : MonoBehaviour
         else 
         {
             Debug.Log("GAME OVER");
+            SoundManager.Instance.PlaySE("stagefailedSE");
             if (gameOverPanel != null) gameOverPanel.SetActive(true);
         }
     }
