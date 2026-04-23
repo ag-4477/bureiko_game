@@ -1,6 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// 無礼講バーの制御を行います。
+/// </summary>
+/// <param name="bureikoBarValue">無礼講バーにたまっている無礼講ポイント</param>
+/// 
 public class BreikoBar : MonoBehaviour
 {
     [SerializeField]
